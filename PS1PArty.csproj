@@ -8,21 +8,9 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<BaseOutputPath>bin\</BaseOutputPath>
 	</PropertyGroup>
-
-	<ItemGroup>
-	  <None Remove="Resources\HPUI.dll" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <EmbeddedResource Include="Resources\HPUI.dll" />
-	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="Assembly-CSharp">
 		  <HintPath>G:\SteamLibrary\steamapps\common\House Party\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
-		  <Private>False</Private>
-		</Reference>
-		<Reference Include="HPUI">
-		  <HintPath>Resources\HPUI.dll</HintPath>
 		  <Private>False</Private>
 		</Reference>
 		<Reference Include="Il2CppCinemachine">
@@ -433,6 +421,9 @@
 		  <HintPath>G:\SteamLibrary\steamapps\common\House Party\MelonLoader\Il2CppAssemblies\UnityEngine.XRModule.dll</HintPath>
 		  <Private>False</Private>
 		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Resources\" />
 	</ItemGroup>
 
 

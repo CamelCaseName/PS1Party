@@ -1,10 +1,8 @@
-﻿using Il2Cpp;
-using Il2CppInterop.Runtime;
+﻿using Il2CppInterop.Runtime;
 using MelonLoader;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
-using UnityEngine.Rendering.HighDefinition.Compositor;
 using UnityEngine.UI;
 
 namespace PS1PArty
@@ -18,11 +16,6 @@ namespace PS1PArty
         int scaledHeight, scaledWidth;
 
         MelonPreferences_Entry<int>? Height;
-
-        static PS1Party()
-        {
-            AssemblyResolverYoinker.SetOurResolveHandlerAtFront();
-        }
 
         public override void OnInitializeMelon()
         {
@@ -40,7 +33,6 @@ namespace PS1PArty
         {
             if (sceneName != "Disclaimer")
             {
-                //todo we have to set filtermode to point for all textures
                 foreach (var obj in UnityEngine.Object.FindObjectsOfTypeAll(Il2CppType.Of<Texture>()))
                 {
                     var material = obj.TryCast<Texture>();
